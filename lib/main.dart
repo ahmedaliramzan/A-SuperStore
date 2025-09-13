@@ -60,30 +60,10 @@ class _HomePageState extends State<HomePage> {
     var screenheight = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.deepOrange,
-        title: Container(
-          height: 45,
-          width: screenwidth * 10,
-          child: TextField(
-            keyboardType: TextInputType.text,
-
-            decoration: InputDecoration(
-              hintText: "Search",
-              suffixIcon: IconButton(
-                onPressed: () {},
-                icon: Icon(Icons.search),
-              ),
-              enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(8),
-                borderSide: BorderSide(color: Colors.black, width: 1),
-              ),
-              focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(8),
-                borderSide: BorderSide(color: Colors.black, width: 1),
-              ),
-            ),
-          ),
-        ),
+        title: Text("A SuperStore",style: TextStyle(fontWeight: FontWeight.w800),),
+        actions: [
+          Icon(Icons.home),
+        ],
       ),
 
       body: GridView.count(
